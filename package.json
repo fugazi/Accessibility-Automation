@@ -1,0 +1,23 @@
+{
+  "name": "accessibility-automation",
+  "version": "1.0.0",
+  "description": "Test Automation Testing for Accessibility with Cypress using Cypress-Axe and Axe-Core.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run spec",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "accessibility",
+    "automation",
+    "javascript",
+    "axe"
+  ],
+  "author": "Douglas Urrea Ocampo",
+  "license": "MIT",
+  "devDependencies": {
+    "axe-core": "^4.4.3",
+    "cypress": "^10.9.0"
+  }
+}
