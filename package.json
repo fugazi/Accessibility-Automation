@@ -17,7 +17,7 @@
   "author": "Douglas Urrea Ocampo",
   "license": "MIT",
   "devDependencies": {
-    "axe-core": "^4.4.3",
+    "axe-core": "^4.5.2",
     "cypress": "^11.0.1",
     "cypress-axe": "^1.0.0"
   }
