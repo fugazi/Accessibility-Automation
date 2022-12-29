@@ -4,18 +4,26 @@ jobs:
  Accessibility-Cypress-Test:
    runs-on: ubuntu-latest
    steps:
-     - name: Checkout GitCode
-       uses: actions/checkout@v2
+     - name: Checkout
+       uses: actions/checkout@v3
        
      - name: Run Cypress Tests [Chrome]
-       uses: cypress-io/github-action@v4
+       uses: cypress-io/github-action@v5.0.2
        with:
-         command: npx cypress run --force
+         project: ./e2e
          browser: chrome
          
      - name: Run Cypress Tests [Firefox]
-       uses: cypress-io/github-action@v4
+       uses: cypress-io/github-action@v5.0.2
        with:
-         command: npx cypress run --force
+         project: ./e2e
          browser: firefox
+         
+     - name: Run Cypress Tests [Edge]
+       uses: cypress-io/github-action@v5.0.2
+       with:
+         project: ./e2e
+         browser: edge
+         
+         
     
