@@ -1,11 +1,21 @@
 name: Accessibility Tests
-on:
- push:
-   branches:
-     - main
+on: [push]
 jobs:
  Accessibility-Cypress-Test:
    runs-on: ubuntu-latest
    steps:
      - name: Checkout GitCode
        uses: actions/checkout@v2
+       
+     - name: Run Cypress Tests [Chrome]
+       uses: cypress-io/github-action@v4
+       with:
+         command: npx cypress run
+         browser: chrome
+         
+     - name: Run Cypress Tests [Firefox]
+       uses: cypress-io/github-action@v4
+       with:
+         command: npx cypress run
+         browser: firefox
+    
