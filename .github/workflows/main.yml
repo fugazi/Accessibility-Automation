@@ -1,0 +1,11 @@
+name: Accessibility Tests
+on:
+ push:
+   branches:
+     - main
+jobs:
+ Accessibility-Cypress-Test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout GitCode
+       uses: actions/checkout@v2
