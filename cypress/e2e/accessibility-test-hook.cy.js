@@ -18,4 +18,13 @@ describe('Visit Democart main page to validate Accessibility rules', () => {
     it('Cypress-axe should only test specific element on the page', () => {
         cy.checkA11y('.btn-default');
     })
+
+    it('Cypress-axe should test specific element on the page with specific rules', () => {
+        cy.checkA11y('.btn-default', {
+            rules: {
+                'color-contrast': { enabled: false },
+                'label': { enabled: false }
+            }
+        });
+    });
 });
