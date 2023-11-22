@@ -12,4 +12,10 @@ describe('Visit Democart main page to validate Accessibility rules', () => {
       cy.injectAxe();
       cy.checkA11y({exclude: ['#content']});
   })
+
+  it('Cypress-axe should only test specific element on the page', () => {
+      cy.visit('https://demo.opencart.com');
+      cy.injectAxe();
+      cy.checkA11y('#menu');
+  })
 });
