@@ -7,7 +7,7 @@ describe('Visit Democart main page to validate Accessibility rules', () => {
       cy.checkA11y();
   });
 
-  it('Cypress-axe should exclude specific elements on the page', () => {
+  it('Cypress-axe should exclude specific elements on the page in this test case', () => {
       cy.visit('https://demo.opencart.com');
       cy.injectAxe();
       cy.checkA11y({exclude: ['#content']});
