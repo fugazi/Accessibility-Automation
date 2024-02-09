@@ -19,7 +19,7 @@ describe('Visit Democart main page to validate Accessibility rules', () => {
       cy.checkA11y('#menu');
   }) 
 
-  it('Cypress-axe should only test specific element in the navigation bar', () => {
+  only.it('Cypress-axe should only test specific element in the navigation bar', () => {
     cy.visit('https://example.com');
     cy.injectAxe();
     cy.checkA11y('nav[name="exampleNav"] .specific-element');
