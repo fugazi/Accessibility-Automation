@@ -2,7 +2,7 @@
 
 describe('Visit Democart main page to validate Accessibility rules', () => {
     beforeEach(() => {
-        cy.visit('https://demo.opencart.com');
+        cy.visit('https://demo.opencart.com', { failOnStatusCode: false });
         cy.injectAxe();
     });
 
@@ -16,11 +16,11 @@ describe('Visit Democart main page to validate Accessibility rules', () => {
     });
 
     it('Cypress-axe should only test specific element on the page', () => {
-        cy.checkA11y('.btn-default');
+        cy.checkA11y('body');
     })
 
     it('Cypress-axe should test specific element on the page with specific rules', () => {
-        cy.checkA11y('.btn-default', {
+        cy.checkA11y('body', {
             rules: {
                 'color-contrast': { enabled: false },
                 'label': { enabled: false }

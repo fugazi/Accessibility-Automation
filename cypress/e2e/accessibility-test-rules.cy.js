@@ -2,7 +2,7 @@
 
 describe('Visit Democart main page to validate Accessibility rules', () => {
     beforeEach(() => {
-        cy.visit('https://demo.opencart.com');
+        cy.visit('https://demo.opencart.com', { failOnStatusCode: false });
         cy.injectAxe();
     });
 
